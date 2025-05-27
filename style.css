@@ -68,7 +68,7 @@ h1{
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
-  flex-shrink: inherit;
+  flex-shrink: 0;
   transition: background-color 0.3s ease, transform 0.2s ease;
   white-space: nowrap; /* Prevents line break */
 }
