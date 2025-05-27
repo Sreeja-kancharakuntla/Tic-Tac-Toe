@@ -14,7 +14,7 @@ body{
 .container{
     min-height: 50vh;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
     margin-right: 2rem;
 }
@@ -23,15 +23,16 @@ body{
     width: 100%;
     max-width:500px;
     display: grid;
-    grid-template-columns: repeat(3, 150px);
+    grid-template-columns: repeat(3, 30vw);
     text-align: center;
     gap: 10px;
     right: 20px;
     margin:auto;
+    position: relative;
 }
 .box{
     aspect-ratio: 1;
-    font-size: 6rem;
+    font-size: 10vw;
     width: 100%;
     background-color: #415a77;
     border-radius: 18px;
@@ -113,15 +114,27 @@ h1{
 .o-player {
     color: blue;  /* Color for O*/
   }
-  
+  .winning-line {
+  position: absolute;
+  height: 5vw;
+  background-color: red;
+  display: none;
+  z-index: 5;
+  transition: all 0.3s ease-in-out;
+  transform-origin: center;
+  border-radius: 5px;
+  }
+
 .x-player {
     color: red;   /* Color for X*/
   } 
-   @media (max-width: 414px) {
+   @media (max-width: 768px) {
     h1 {
         font-size: 2rem;
     }
-
+    .box {
+        font-size: 8vw;
+    }
     #msg {
         font-size: 1.8rem;
     }
