@@ -14,25 +14,23 @@ body{
 .container{
     min-height: 50vh;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    margin: 2.5rem;
 }
 .game{
     height: auto;
     width: 100%;
     max-width:500px;
     display: grid;
-    grid-template-columns: repeat(3, 20vw);
+    grid-template-columns: repeat(3, 150px);
     text-align: center;
     gap: 10px;
     right: 20px;
     margin:auto;
-    position: relative;
 }
 .box{
     aspect-ratio: 1;
-    font-size: 10vw;
+    font-size: 6rem;
     width: 100%;
     background-color: #415a77;
     border-radius: 18px;
@@ -53,23 +51,24 @@ h1{
 #buttons{
     margin-top:3rem;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 1.2rem;
-    font-weight: bold;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-top: 3rem;
+  overflow-x: none;
+  padding: 0 10px;
+    gap: 20px;
 }
 #buttons button {
-  min-width: 140px;
-  max-width: 200px;
-  padding: 14px 24px;
+  padding: 12px 20px;
   background-color: #c9ada7;
   color: #0d1b2a;
   border: none;
-  border-radius: 25px;
+  border-radius: 2rem;
   font-size: 1rem;
-  flex: 1 1 auto;
-  white-space: nowrap;
+  font-weight: bold;
   cursor: pointer;
+  flex-shrink: inherit;
   transition: background-color 0.3s ease, transform 0.2s ease;
   white-space: nowrap; /* Prevents line break */
 }
@@ -79,16 +78,7 @@ h1{
   transform: scale(1.05);
 }
 #reset, #back, #new-game{
-    padding: 12px 24px;
-    color:#0d1b2a;
-    border-radius: 2rem;
-    background-color: #c9ada7;
-    font-weight: 700;
-    border: none;
-    font-size: 1rem;
     text-wrap:inherit;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 #msg{
     color:#415a77;
@@ -117,27 +107,15 @@ h1{
 .o-player {
     color: blue;  /* Color for O*/
   }
-  .winning-line {
-  position: absolute;
-  height: 5vw;
-  background-color: red;
-  display: none;
-  z-index: 5;
-  transition: all 0.3s ease-in-out;
-  transform-origin: center;
-  border-radius: 5px;
-  }
-
+  
 .x-player {
     color: red;   /* Color for X*/
   } 
- @media (max-width: 768px) {
+   @media (max-width: 414px) {
     h1 {
         font-size: 2rem;
     }
-    .box {
-        font-size: 8vw;
-    }
+
     #msg {
         font-size: 1.8rem;
     }
@@ -152,8 +130,4 @@ h1{
         flex-direction: column;
         align-items: center;
     }
-    #buttons button {
-    width: 80%;
-    max-width: none;
-  }
 }
