@@ -15,11 +15,10 @@ body{
     min-height: auto;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
 }
 .game{
-    max-width:320px;
     display: grid;
     grid-template-columns: repeat(3, 150px);
     text-align: center;
@@ -130,7 +129,6 @@ h1{
         width: 80%;
         max-width: 200px;
         font-size: 1rem;
-        padding: 10px;
     }
     #buttons {
         display: flex;
