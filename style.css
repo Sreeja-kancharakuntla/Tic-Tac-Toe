@@ -110,7 +110,7 @@ h1{
 .x-player {
     color: red;   /* Color for X*/
   } 
-   @media (max-width: 414px) {
+   @media (max-width: 300px) {
     h1 {
         font-size: 2rem;
     }
@@ -132,7 +132,7 @@ h1{
     }
     #buttons {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 }
