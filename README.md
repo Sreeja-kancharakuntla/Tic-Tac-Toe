@@ -47,6 +47,11 @@ tic-tac-toe/
 ├─ style.css         # Styles
 ├─ script.js         # Game logic
 └─ /demo             # Screenshots / GIF
+# Output
+<p align="center">
+  <img src="demo/tic-tac-toe-output.gif" alt="Tic Tac Toe GIF" width="500"/>
+</p>
+You can play my game at : https://sreeja-tic-tac-toe.netlify.app/
 
 # Contributing🤝
 Pull requests are welcome! Open an issue first to discuss major changes.

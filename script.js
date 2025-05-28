@@ -6,6 +6,27 @@ let msgContainer=document.querySelector(".msg-container");
 let msg=document.querySelector("#msg");
 let backBtn = document.querySelector("#back");
 
+function stylePopupNewGameButton() {
+    newGameBtn.style.padding = "12px 24px";
+    newGameBtn.style.fontSize = "1rem";
+    newGameBtn.style.backgroundColor = "#c9ada7";
+    newGameBtn.style.color = "#0d1b2a";
+    newGameBtn.style.border = "none";
+    newGameBtn.style.borderRadius = "2rem";
+    newGameBtn.style.fontWeight = "bold";
+    newGameBtn.style.cursor = "pointer";
+    newGameBtn.style.transition = "all 0.3s ease";
+
+
+    // Optional hover effect using JS
+    newGameBtn.addEventListener("mouseenter", () => {
+        newGameBtn.style.backgroundColor = "#e6cfc8";
+    });
+    newGameBtn.addEventListener("mouseleave", () => {
+        newGameBtn.style.backgroundColor = "#c9ada7";
+    });
+}
+
 let turnO=true;//player1,player2
 let moveHistory = [];
 const resetGame=()=>{
@@ -58,6 +79,8 @@ const enableBoxes=()=>{
 const showWinner=(winner)=>{
     msg.innerText=`🎉🎉Congratulations, Winner is ${winner}🎉🎉`;
     msgContainer.classList.remove("hide");
+
+    stylePopupNewGameButton();
     disableBoxes();
 }
 
@@ -77,6 +100,7 @@ const checkWinner=()=>{
     if ([...boxes].every(box => box.innerText !== "")) {
         msg.innerText = "😅 It's a Draw!";
         msgContainer.classList.remove("hide");
+        stylePopupNewGameButton();
         disableBoxes();
     }
 };
@@ -93,4 +117,3 @@ backBtn.addEventListener("click", () => {
 });
 newGameBtn.addEventListener("click",resetGame);
 reset.addEventListener("click",resetGame);
-document.querySelector("#new-game").addEventListener("click", resetGame);
